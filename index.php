@@ -23,4 +23,35 @@
     var_dump($newX);
     echo '<br>Imprimindo nuevo tamaño de lo Array --> '.count($newX);
     
+    echo '<h2>Ejercicio 3 Arrays</h2>';
+
+    function encuentraChar($arrayPalabras, $letra){
+        foreach($arrayPalabras as $palabra) {
+            if(stripos($palabra, $letra) === false){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    $palabras = ["hola", "Php", "Html"];
+    $letra ="h";
+    
+    if(encuentraChar($palabras, $letra)){
+        echo "El caracter: '$letra' fue encontrado en todas las palabras de lo Array";
+    }else{
+        echo "El caracter: '$letra' no esta presente en todas las palabras de lo Array";
+    }
+    
+    echo '<h2>Ejercicio 4 Arrays</h2>';
+    $arrayAboutMe = array(
+        "nombre"    => "Myrella",
+        "edad"      => 31,
+        "email"     => "myrella@itAcademy.es",
+        "comidaFav" => "Pizza" 
+    ); 
+    echo "Nombre: ".$arrayAboutMe['nombre']."<br>";
+    echo "Edad: ".$arrayAboutMe['edad']."<br>";
+    echo "Email: ".$arrayAboutMe['email']."<br>";
+    echo "Comida Favorita: ".$arrayAboutMe['comidaFav']."<br>";
 ?>
